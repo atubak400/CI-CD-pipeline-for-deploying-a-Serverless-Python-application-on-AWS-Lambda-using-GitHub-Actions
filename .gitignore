@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv
+
+# Logs
+*.log
+
+# AWS CDK / SAM / Serverless Framework files (if you use them later)
+.aws-sam/
+.serverless/
+
+# Mac system files
+.DS_Store
+
+# VSCode settings
+.vscode/
+*.pem
