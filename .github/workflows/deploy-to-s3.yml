@@ -1,0 +1,35 @@
+name: Upload Lambda App to S3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+
+    - name: Zip Lambda function
+      run: |
+        cd lambda-app
+        zip -r ../lambda-app.zip .
+
+    - name: Upload to S3
+      uses: aws-actions/s3-sync@v2
+      with:
+        bucket: kingsley-serverless-artifacts
+        region: us-west-2
+        source: .
+        destination: /
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
