@@ -1,3 +1,4 @@
+
 version: 0.2
 
 phases:
@@ -5,16 +6,13 @@ phases:
     runtime-versions:
       python: 3.11
     commands:
-      - echo Installing dependencies...
+      - echo "Installing dependencies..."
       - pip install -r requirements.txt -t . --verbose
-      - echo Listing installed files:
+      - echo "Files after installing dependencies:"
       - ls -la
-      - echo Checking if 'requests' was installed:
-      - python -c "import requests; print(requests.__version__)"
   build:
     commands:
-      - echo Build phase completed!
+      - echo "Building application..."
 artifacts:
   files:
     - '**/*'
-
