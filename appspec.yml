@@ -1,6 +1,9 @@
 version: 0.0
 Resources:
-  - ResourceType: AWS::Lambda::Function
-    ResourceName: serverless-python-app
-    LambdaFunctionVersion: 1
-    LambdaFunctionAlias: prod
+  - serverless-python-app:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: serverless-python-app
+        Alias: prod
+        CurrentVersion: 1
+        TargetVersion: 2
