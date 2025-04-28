@@ -6,4 +6,4 @@ Resources:
         Name: serverless-python-app
         Alias: prod
         CurrentVersion: 1
-        TargetVersion: 2
+        TargetVersion: 1
