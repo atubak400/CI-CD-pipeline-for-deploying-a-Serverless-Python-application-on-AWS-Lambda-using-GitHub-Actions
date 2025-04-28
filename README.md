@@ -1,4 +1,6 @@
 # 🚀 CI/CD Pipeline for Serverless Python Application on AWS Lambda (Using GitHub Actions, CodePipeline, CodeDeploy)
+![Pipeline Screenshot](images/pipeline-screenshot.jpeg)
+![Project Milestones](images/Project%20Milestones.png)
 
 ## 📋 Project Overview
 

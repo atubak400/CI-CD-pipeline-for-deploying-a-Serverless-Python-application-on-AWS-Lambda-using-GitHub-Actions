@@ -1,24 +1,38 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*.egg
-*.egg-info/
-dist/
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# AWS CLI files
+.aws/
+
+# Lambda build artifacts
+*.zip
+function.zip
+
+# Node modules (if you ever add frontend or scripts)
+node_modules/
+
+# Buildspec and Apps files (only if you generate temporary files)
 build/
-.eggs/
+dist/
+
+# Secrets (never push these!)
+*.env
 .env
-.venv
 
-# Logs
-*.log
-
-# AWS CDK / SAM / Serverless Framework files (if you use them later)
-.aws-sam/
-.serverless/
-
-# Mac system files
+# MacOS system files
 .DS_Store
 
-# VSCode settings
+# IDE/editor settings
 .vscode/
-*.pem
+.idea/
+
+# GitHub Actions temp files
+.github/workflows/*.bak
